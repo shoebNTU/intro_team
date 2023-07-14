@@ -8,7 +8,7 @@ st.set_page_config(
 
 st.write("# Welcome to our introduction app! 👋")
 
-file_path = './introduction.pdf'
+file_path = './Introduction.pdf'
 with open(file_path,"rb") as f:
     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
