@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+from pathlib import Path
 
 st.set_page_config(
     page_title="Hello",
@@ -8,7 +9,7 @@ st.set_page_config(
 
 st.write("# Welcome to our introduction app! 👋")
 
-file_path = 'Introduction.pdf'
+file_path = Path('Introduction.pdf')
 with open(file_path,"rb") as f:
     base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 # st.write(base64_pdf)
